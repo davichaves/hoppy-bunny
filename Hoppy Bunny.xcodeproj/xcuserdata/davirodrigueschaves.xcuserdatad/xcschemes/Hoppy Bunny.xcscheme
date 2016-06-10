@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B521FB1A1D0AB5F6004DCCE4"
+               BuildableName = "Hoppy Bunny.app"
+               BlueprintName = "Hoppy Bunny"
+               ReferencedContainer = "container:Hoppy Bunny.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B521FB321D0AB5F6004DCCE4"
+               BuildableName = "Hoppy BunnyTests.xctest"
+               BlueprintName = "Hoppy BunnyTests"
+               ReferencedContainer = "container:Hoppy Bunny.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B521FB3D1D0AB5F6004DCCE4"
+               BuildableName = "Hoppy BunnyUITests.xctest"
+               BlueprintName = "Hoppy BunnyUITests"
+               ReferencedContainer = "container:Hoppy Bunny.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B521FB1A1D0AB5F6004DCCE4"
+            BuildableName = "Hoppy Bunny.app"
+            BlueprintName = "Hoppy Bunny"
+            ReferencedContainer = "container:Hoppy Bunny.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B521FB1A1D0AB5F6004DCCE4"
+            BuildableName = "Hoppy Bunny.app"
+            BlueprintName = "Hoppy Bunny"
+            ReferencedContainer = "container:Hoppy Bunny.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B521FB1A1D0AB5F6004DCCE4"
+            BuildableName = "Hoppy Bunny.app"
+            BlueprintName = "Hoppy Bunny"
+            ReferencedContainer = "container:Hoppy Bunny.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
