@@ -27,6 +27,9 @@ class GameScene: SKScene {
         
         /* Set reference to scroll layer node */
         scrollLayer = self.childNodeWithName("scrollLayer")
+        
+        /* Set reference to obstacle layer node */
+        obstacleLayer = self.childNodeWithName("obstacleLayer")
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -76,6 +79,8 @@ class GameScene: SKScene {
         
         /* Process obstacles */
         updateObstacles()
+        
+        spawnTimer+=fixedDelta
     }
     
     func scrollWorld() {
@@ -118,6 +123,23 @@ class GameScene: SKScene {
                 obstacle.removeFromParent()
             }
             
+        }
+        
+        if spawnTimer >= 1.5 {
+            
+            /* Create a new obstacle reference object using our obstacle resource */
+            let resourcePath = NSBundle.mainBundle().pathForResource("Obstacle", ofType: "sks")
+            let newObstacle = SKReferenceNode (URL: NSURL (fileURLWithPath: resourcePath!))
+            obstacleLayer.addChild(newObstacle)
+            
+            /* Generate new obstacle position, start just outside screen and with a random y value */
+            let randomPosition = CGPointMake(352, CGFloat.random(min: 234, max: 382))
+            
+            /* Convert new node position back to obstacle layer space */
+            newObstacle.position = self.convertPoint(randomPosition, toNode: obstacleLayer)
+            
+            // Reset spawn timer
+            spawnTimer = 0
         }
         
     }
