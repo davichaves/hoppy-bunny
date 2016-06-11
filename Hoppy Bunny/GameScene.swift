@@ -13,9 +13,11 @@ class GameScene: SKScene {
     
     var hero: SKSpriteNode!
     var sinceTouch : CFTimeInterval = 0
+    var spawnTimer: CFTimeInterval = 0
     let fixedDelta: CFTimeInterval = 1.0/60.0 /* 60 FPS */
     let scrollSpeed: CGFloat = 160
     var scrollLayer: SKNode!
+    var obstacleLayer: SKNode!
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -71,6 +73,9 @@ class GameScene: SKScene {
         
         /* Process world scrolling */
         scrollWorld()
+        
+        /* Process obstacles */
+        updateObstacles()
     }
     
     func scrollWorld() {
@@ -93,5 +98,27 @@ class GameScene: SKScene {
                 ground.position = self.convertPoint(newPosition, toNode: scrollLayer)
             }
         }
+    }
+    
+    func updateObstacles() {
+        /* Update Obstacles */
+        
+        obstacleLayer.position.x -= scrollSpeed * CGFloat(fixedDelta)
+        
+        /* Loop through obstacle layer nodes */
+        for obstacle in obstacleLayer.children as! [SKReferenceNode] {
+            
+            /* Get obstacle node position, convert node position to scene space */
+            let obstaclePosition = obstacleLayer.convertPoint(obstacle.position, toNode: self)
+            
+            /* Check if obstacle has left the scene */
+            if obstaclePosition.x <= 0 {
+                
+                /* Remove obstacle node from obstacle layer */
+                obstacle.removeFromParent()
+            }
+            
+        }
+        
     }
 }
