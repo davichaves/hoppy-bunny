@@ -76,5 +76,22 @@ class GameScene: SKScene {
     func scrollWorld() {
         /* Scroll World */
         scrollLayer.position.x -= scrollSpeed * CGFloat(fixedDelta)
+        
+        /* Loop through scroll layer nodes */
+        for ground in scrollLayer.children as! [SKSpriteNode] {
+            
+            /* Get ground node position, convert node position to scene space */
+            let groundPosition = scrollLayer.convertPoint(ground.position, toNode: self)
+            
+            /* Check if ground sprite has left the scene */
+            if groundPosition.x <= -ground.size.width / 2 {
+                
+                /* Reposition ground sprite to the second starting position */
+                let newPosition = CGPointMake( (self.size.width / 2) + ground.size.width, groundPosition.y)
+                
+                /* Convert new node position back to scroll layer space */
+                ground.position = self.convertPoint(newPosition, toNode: scrollLayer)
+            }
+        }
     }
 }
