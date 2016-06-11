@@ -18,6 +18,7 @@
 		B521FB431D0AB5F6004DCCE4 /* Hoppy_BunnyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B521FB421D0AB5F6004DCCE4 /* Hoppy_BunnyUITests.swift */; };
 		B521FB511D0AB643004DCCE4 /* SFX in Resources */ = {isa = PBXBuildFile; fileRef = B521FB501D0AB643004DCCE4 /* SFX */; };
 		B521FB531D0B2765004DCCE4 /* Hero.sks in Resources */ = {isa = PBXBuildFile; fileRef = B521FB521D0B2765004DCCE4 /* Hero.sks */; };
+		B5A06DB71D0B8975007D921C /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A06DB61D0B8975007D921C /* CGFloatExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B521FB441D0AB5F6004DCCE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B521FB501D0AB643004DCCE4 /* SFX */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SFX; sourceTree = "<group>"; };
 		B521FB521D0B2765004DCCE4 /* Hero.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Hero.sks; sourceTree = "<group>"; };
+		B5A06DB61D0B8975007D921C /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B521FB201D0AB5F6004DCCE4 /* GameScene.sks */,
 				B521FB521D0B2765004DCCE4 /* Hero.sks */,
 				B521FB221D0AB5F6004DCCE4 /* GameScene.swift */,
+				B5A06DB61D0B8975007D921C /* CGFloatExtensions.swift */,
 				B521FB241D0AB5F6004DCCE4 /* GameViewController.swift */,
 				B521FB261D0AB5F6004DCCE4 /* Main.storyboard */,
 				B521FB291D0AB5F6004DCCE4 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 			files = (
 				B521FB231D0AB5F6004DCCE4 /* GameScene.swift in Sources */,
 				B521FB251D0AB5F6004DCCE4 /* GameViewController.swift in Sources */,
+				B5A06DB71D0B8975007D921C /* CGFloatExtensions.swift in Sources */,
 				B521FB1F1D0AB5F6004DCCE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +504,7 @@
 				B521FB491D0AB5F6004DCCE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B521FB4A1D0AB5F6004DCCE4 /* Build configuration list for PBXNativeTarget "Hoppy BunnyTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				B521FB4C1D0AB5F6004DCCE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B521FB4D1D0AB5F6004DCCE4 /* Build configuration list for PBXNativeTarget "Hoppy BunnyUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +522,7 @@
 				B521FB4F1D0AB5F6004DCCE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
