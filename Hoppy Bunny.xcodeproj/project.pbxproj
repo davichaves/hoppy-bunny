@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51F2A011D0CD44400D68134 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F2A001D0CD44400D68134 /* MSButtonNode.swift */; };
 		B521FB1F1D0AB5F6004DCCE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B521FB1E1D0AB5F6004DCCE4 /* AppDelegate.swift */; };
 		B521FB211D0AB5F6004DCCE4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B521FB201D0AB5F6004DCCE4 /* GameScene.sks */; };
 		B521FB231D0AB5F6004DCCE4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B521FB221D0AB5F6004DCCE4 /* GameScene.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B51F2A001D0CD44400D68134 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 		B521FB1B1D0AB5F6004DCCE4 /* Hoppy Bunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hoppy Bunny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B521FB1E1D0AB5F6004DCCE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B521FB201D0AB5F6004DCCE4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B521FB521D0B2765004DCCE4 /* Hero.sks */,
 				B521FB221D0AB5F6004DCCE4 /* GameScene.swift */,
 				B5A06DB81D0B923B007D921C /* Obstacle.sks */,
+				B51F2A001D0CD44400D68134 /* MSButtonNode.swift */,
 				B5A06DB61D0B8975007D921C /* CGFloatExtensions.swift */,
 				B521FB241D0AB5F6004DCCE4 /* GameViewController.swift */,
 				B521FB261D0AB5F6004DCCE4 /* Main.storyboard */,
@@ -282,6 +285,7 @@
 				B521FB251D0AB5F6004DCCE4 /* GameViewController.swift in Sources */,
 				B5A06DB71D0B8975007D921C /* CGFloatExtensions.swift in Sources */,
 				B521FB1F1D0AB5F6004DCCE4 /* AppDelegate.swift in Sources */,
+				B51F2A011D0CD44400D68134 /* MSButtonNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
