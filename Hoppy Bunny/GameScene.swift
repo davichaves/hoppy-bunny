@@ -204,13 +204,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let nodeA = contactA.node!
         let nodeB = contactB.node!
         
-        print(nodeA.name)
-        print(nodeB.name)
-        
         /* Did our hero pass through the 'goal'? */
         if nodeA.name == "goal" || nodeB.name == "goal" {
-            print(nodeA.name)
-            print(nodeB.name)
             
             /* Increment points */
             points += 1
