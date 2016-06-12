@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B51F2A011D0CD44400D68134 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F2A001D0CD44400D68134 /* MSButtonNode.swift */; };
+		B51F2A051D0CF1A200D68134 /* GameEffects.sks in Resources */ = {isa = PBXBuildFile; fileRef = B51F2A041D0CF1A200D68134 /* GameEffects.sks */; };
 		B521FB1F1D0AB5F6004DCCE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B521FB1E1D0AB5F6004DCCE4 /* AppDelegate.swift */; };
 		B521FB211D0AB5F6004DCCE4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B521FB201D0AB5F6004DCCE4 /* GameScene.sks */; };
 		B521FB231D0AB5F6004DCCE4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B521FB221D0AB5F6004DCCE4 /* GameScene.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		B51F2A001D0CD44400D68134 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		B51F2A041D0CF1A200D68134 /* GameEffects.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameEffects.sks; sourceTree = "<group>"; };
 		B521FB1B1D0AB5F6004DCCE4 /* Hoppy Bunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hoppy Bunny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B521FB1E1D0AB5F6004DCCE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B521FB201D0AB5F6004DCCE4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B521FB1E1D0AB5F6004DCCE4 /* AppDelegate.swift */,
 				B521FB201D0AB5F6004DCCE4 /* GameScene.sks */,
 				B521FB521D0B2765004DCCE4 /* Hero.sks */,
+				B51F2A041D0CF1A200D68134 /* GameEffects.sks */,
 				B521FB221D0AB5F6004DCCE4 /* GameScene.swift */,
 				B5A06DB81D0B923B007D921C /* Obstacle.sks */,
 				B51F2A001D0CD44400D68134 /* MSButtonNode.swift */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51F2A051D0CF1A200D68134 /* GameEffects.sks in Resources */,
 				B521FB211D0AB5F6004DCCE4 /* GameScene.sks in Resources */,
 				B521FB511D0AB643004DCCE4 /* SFX in Resources */,
 				B521FB2D1D0AB5F6004DCCE4 /* LaunchScreen.storyboard in Resources */,

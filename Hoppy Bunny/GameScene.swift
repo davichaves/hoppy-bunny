@@ -25,6 +25,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var buttonRestart: MSButtonNode!
     /* Game management */
     var gameState: GameSceneState = .Active
+    var scoreLabel: SKLabelNode!
+    var points = 0
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -37,6 +39,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Set reference to obstacle layer node */
         obstacleLayer = self.childNodeWithName("obstacleLayer")
+        
+        scoreLabel = self.childNodeWithName("scoreLabel") as! SKLabelNode
+        /* Reset Score label */
+        scoreLabel.text = String(points)
         
         /* Set physics contact delegate */
         physicsWorld.contactDelegate = self
@@ -69,6 +75,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if gameState != .Active { return }
         
         /* Called when a touch begins */
+        
+        /* Reset velocity, helps improve response against cumulative falling velocity */
+        hero.physicsBody?.velocity = CGVectorMake(0, 0)
         
         /* Apply vertical impulse */
         hero.physicsBody?.applyImpulse(CGVectorMake(0, 250))
@@ -187,6 +196,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Ensure only called while game running */
         if gameState != .Active { return }
         
+        /* Get references to bodies involved in collision */
+        let contactA:SKPhysicsBody = contact.bodyA
+        let contactB:SKPhysicsBody = contact.bodyB
+        
+        /* Get references to the physics body parent nodes */
+        let nodeA = contactA.node!
+        let nodeB = contactB.node!
+        
+        print(nodeA.name)
+        print(nodeB.name)
+        
+        /* Did our hero pass through the 'goal'? */
+        if nodeA.name == "goal" || nodeB.name == "goal" {
+            print(nodeA.name)
+            print(nodeB.name)
+            
+            /* Increment points */
+            points += 1
+            
+            /* Update score label */
+            scoreLabel.text = String(points)
+            
+            /* We can return now */
+            return
+        }
+        
         /* Hero touches anything, game over */
         
         /* Change game state to game over */
@@ -212,6 +247,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Run action */
         hero.runAction(heroDeath)
+        
+        /* Load the shake action resource */
+        let shakeScene:SKAction = SKAction.init(named: "Shake")!
+        
+        /* Loop through all nodes  */
+        for node in self.children {
+            
+            /* Apply effect each ground node */
+            node.runAction(shakeScene)
+        }
         
         /* Show restart button */
         buttonRestart.state = .Active
